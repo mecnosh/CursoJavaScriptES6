@@ -1,0 +1,56 @@
+WEBPACK -> SERVIDOR PARA O NAVEGADOR ATUALIZAR CADA VEZ QUE ATUALIZAR O CODIGO
+
+preset env, ele vai entender qual o ambiente que estamos trabalhando, ele converte o codigo para todos
+os navegadores entenderem qual codigo esta la
+
+const nao pode ter valor reatribuido
+
+let é para variavel de escopo
+
+map ele percorre o vetor por cada item e executa a ação que precisa 
+
+//IMPORT E EXPORT
+
+para importar importar um arquivo de outro diretorio, precisa dar um export antes de qualqer função, classe, variavel e executa
+para assim no arquivo que quer importar dar um importa dando o diretorio como caminho para o importe
+
+na pasta src vai ficar todo o código javascript que será utilizado na aplicação
+
+na pasta public irá ter todos os arquivos que não vai ser trabalhado diretamente com a parte 
+do webpack
+
+
+webpack antigo
+ // "dev": "webpack --mode=development -w"
+ "-w" serve para monitorar cada vez que o codigo for atualizado
+
+//cria um comando pro yarn
+"build": "webpack --mode=production"
+//executa o comando acima e gera um bundle.js 
+yarn build
+
+//UTILIDADE DO WEBPACK SERVER
+
+ele vai monitorar toda vez que for executado uma ação na pasta src(nos arquivos js)
+ele vai dar um refresh, atualizando a pagina automaticamente para assim ver as alterações em tela
+
+//ASYNC/AWAIT
+promisses são formas de realizar ações de forma assíncrona
+são muito utilizadas para fazer requisições a API, endpoints, servidores back-end
+
+para adicionar o plugin do async/await no babel tem que dar o seguinte comando:
+yarn add @babel/plugin-transform-async-to-generator -D
+o comando abaixo tras outras funcionalidades pro babel
+yarn add @babel/polyfill -D
+
+após isso adiciona no .babelrc o @babel/plugin-transform-async-to-generator
+
+e dps o polyfill no webpack.config.js
+
+adicionando um novo parametro no entry
+
+entry: ['@babel/polyfill', './src/main.js']
+
+yarn add axios
+adiciona o axios
+
